@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Prediction</title>
+  
+</head>
+
+<style>
+  body{
+    text-align: center;
+    background-color: lightcyan;
+  
+    background-image: url("/static/new.jpg");
+    background-size: 1600px;
+    background-repeat: no-repeat;
+    font-size: larger;
+  }
+  button{
+    background-color: lightpink;
+  }
+</style>
+<body>
+ <div class="login">
+	<h1>Diabetes Prediction</h1>
+    
+      <form action="{{ url_for('predict_datapoint')}}" method="post">
+
+        <label for="pregnancies">Pregnancies:</label>
+        <input type="text" id="pregnancies" name="pregnancies" required><br><br>
+        <label for="glucose">Glucose:</label>
+        <input type="text" id="glucose" name="glucose" required><br><br>
+        <label for="bloodpressure">BloodPressure:</label>
+        <input type="text" id="bloodpressure" name="bloodpressure" required><br><br>
+        <label for="skinthickness">SkinThickness:</label>
+        <input type="text" id="skinthickness" name="skinthickness" required><br><br>
+        <label for="insulin">Insulin:</label>
+        <input type="text" id="insulin" name="insulin" required><br><br>
+        <label for="bmi">BMI:</label>
+        <input type="text" id="bmi" name="bmi" required><br><br>
+        <label for="diabetespedigreefunction">DiabetesPedigreeFunction:</label>
+        <input type="text" id="diabetespedigreefunction" name="diabetespedigreefunction" required><br><br>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      
+      </form>
+
+   <br>
+   <br>
+
+ </div>
+
+</body>
+</html>
